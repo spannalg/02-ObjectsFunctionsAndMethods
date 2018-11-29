@@ -4,11 +4,11 @@ Demonstrates using (calling) FUNCTIONS and using (calling) METHODS:
   -- how they differ.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Luke Spannan.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #   With your instructor, READ the file   methods_vs_functions.txt
 #   in this project, ASKING QUESTIONS as needed to understand its contents.
 #   After you have done so, mark this _TODO_ as DONE
@@ -28,10 +28,10 @@ def main():
     """
     window = rg.TurtleWindow()
 
-    run_example()
-    try_methods()
+    # run_example()
+    # try_methods()
     try_functions()
-    try_methods_and_functions()
+    #try_methods_and_functions()
 
     window.close_on_mouse_click()
 
@@ -93,12 +93,12 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
     #
     # Instead, ** CALL ** this function as needed in the other problems.
     # -------------------------------------------------------------------------
-    for _ in range(number_of_squares):
-        my_turtle.draw_square(size)
-        my_turtle.left(twist)
+    for _ in range(10):
+        my_turtle.draw_square(120)
+        my_turtle.left(36)
 
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #   There are four FUNCTIONS defined ABOVE this:
 #     main
 #     run_example
@@ -126,6 +126,12 @@ def draw_many_squares(my_turtle, number_of_squares, size, twist):
 
 
 def try_methods():
+    picasso=rg.SimpleTurtle()
+    picasso.pen=rg.Pen('brown',5)
+    picasso.forward(150)
+    picasso.left(90)
+    picasso.forward(50)
+    picasso.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -145,6 +151,12 @@ def try_methods():
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
 def try_functions():
+
+
+    jump_and_move_turtle(200, 100, 300, 30)
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
+
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)
@@ -166,6 +178,26 @@ def try_functions():
 # IMPORTANT: Read the NOTE below before you try to implement the next function!
 ###############################################################################
 def try_methods_and_functions():
+    blue = rg.SimpleTurtle()
+    blue.pen=rg.Pen('Blue',5)
+    blue.backward(150)
+    blue.speed=1
+    for k in range (2):
+        blue.draw_square(100)
+        blue.right(30)
+    blue.speed=5
+    blue.pen=rg.Pen('Red',5)
+    for k in range (10):
+        blue.draw_square(50)
+        blue.left(15)
+    blue.speed=100
+    blue.pen=rg.Pen('Red',35)
+    for k in range (8):
+        blue.draw_square(300)
+        blue.right(60)
+    blue.pen=rg.Pen('black',3)
+    blue.backward(200)
+    blue.draw_circle(50)
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
